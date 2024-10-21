@@ -29,3 +29,25 @@ const myfunction=function(){
 }
 console.log(myfunction);
 console.log(typeof(myfunction));
+
+
+// ****************************\
+// stack(primitive) and heap(non-primitive)
+
+let myname="adarshchaudhary"
+
+let anotherName=myname;
+anotherName="akulchaudhary";
+// console.log(anotherName);
+// console.log(myname);
+
+let user={
+    email: "akul@chaudhary.com",
+    upiID: "akul@ybl",
+}
+
+let anotheruser=user;
+
+anotheruser.email="adarsh@jaat.com";
+console.log(user);
+console.log(anotheruser);
