@@ -49,10 +49,39 @@ const user=[
 
 // console.log(user[1]);
 
-console.log(tinderuser);
-console.log(Object.keys(tinderuser));
-console.log(Object.values(tinderuser));
-console.log(Object.entries(tinderuser));
+// console.log(tinderuser);
+// console.log(Object.keys(tinderuser));
+// console.log(Object.values(tinderuser));
+// console.log(Object.entries(tinderuser));
 // *****************these outcomes will be in array forms******************
 
-console.log(tinderuser.hasOwnProperty('names'));
+// console.log(tinderuser.hasOwnProperty('names'));
+
+
+
+const course={
+    courseName: "js",
+    courseTeacher: "youtube"
+}
+
+
+console.log(course.courseTeacher);
+// *******destructure******************
+const {courseTeacher: guru}=course
+
+console.log(guru);
+
+
+// ***json syntax ************
+
+// {
+//     "name": "adarsh",
+//     "course": "js",
+//     "price": "free"
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
