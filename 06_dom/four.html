@@ -15,12 +15,38 @@
     </ul>
 </body>
 <script>
-    function addland(langname){
-        const li=document.createElement('li');
-        li.innerHTML=`${langname}`;
-        document.querySelector('.language').appendChild(li)
-    }
-    addland("heart"); 
-    addland("jack");
+    // function addland(langname){
+    //     const li=document.createElement('li');
+    //     li.innerHTML=`${langname}`;
+    //     document.querySelector('.language').appendChild(li)
+    // }
+
+    // function addoptimise(langname){
+    //     const li=document.createElement('li');
+    //     li.appendChild(document.createTextNode(langname));
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addland("heart"); 
+    // addland("jack");
+    // addland("jack");
+    // addoptimise("one");
+
+
+    // edit**********\
+
+    const secard=document.querySelector('li:nth-child(2)')
+    secard.innerHTML=`${"two"}`;
+    const newcard=document.createElement('li')
+    newcard.innerHTML="dfa";
+    secard.replaceWith(newcard);
+    console.log(secard);
+
+    // edit 
+    const firstcard=document.querySelector('li:first-child')
+    firstcard.outerHTML='<li>Tyoe</li>'
+
+    // remove
+    const lastcard=document.querySelector("li:second-last-child");
+    lastcard.remove();
 </script>
 </html>
