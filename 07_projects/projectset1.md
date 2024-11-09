@@ -9,40 +9,27 @@
 ## project 1
 ```javascript
  console.log("Adarsh Chaudhary");
-    html {
-  margin: 0;
-}
+const buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
 
-span {
-  display: block;
-}
-.canvas {
-  margin: 100px auto 100px;
-  width: 80%;
-  text-align: center;
-}
-
-.button {
-  width: 100px;
-  height: 100px;
-  border: solid black 2px;
-  display: inline-block;
-}
-
-#grey {
-  background: grey;
-}
-
-#white {
-  background: white;
-}
-#blue {
-  background: blue;
-}
-#yellow {
-  background: yellow;
-}
-#purple{
-  background:purple;
-}
+buttons.forEach(function (button) {
+  console.log(button);
+  button.addEventListener('click', function (e) {
+    console.log(e);
+    console.log(e.target);
+    if (e.target.id === 'grey') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'white') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'blue') {
+      body.style.backgroundColor = e.target.id;
+    }
+    if (e.target.id === 'yellow') {
+      body.style.backgroundColor = e.target.id;
+    }
+    
+  });
+});
 ```
