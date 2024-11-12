@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        const sayadarsh=function(){
+            console.log("Adarah");
+        }
+        setTimeout(sayadarsh,2000)
+        
+        const changeText=function(){
+            document.querySelector('h1').innerHTML="Wah adarsh";
+        }
+        const cahngeme=setTimeout(changeText,3000);
+
+        // clearTimeout(cahngeme);
+        document.querySelector('#stop').addEventListener('click',function(){
+            clearTimeout(cahngeme);
+            console.log("Stopped")
+        })
+    </script>
+</html>
