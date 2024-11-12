@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events
+    </title>
+</head>
+<body style="background-color: #414141; color:aliceblue;">
+        <h2>Amazing Images</h2>
+        <div>
+            <ul id="Images">
+                <li><img width="200px" height="200px" id="photoshop" src="https://cdn.photoshoptutorials.ws/wp-content/uploads/2020/06/Underwater-Man-scaled.jpg?strip=all&lossy=1&webp=82&avif=82&ssl=1" alt="photoshop"></li>
+                <li><img width="200px" id="japan" src="https://t3.ftcdn.net/jpg/02/65/23/70/360_F_265237090_Muthvb72m2POYFjyx7F5UCQLh9JdBtKN.jpg" alt="japan"></li>
+                <li><img width="200px" id="river" src="https://t4.ftcdn.net/jpg/00/67/38/91/360_F_67389110_tpws3RYaj05FQKtDNuFgCjMZQ8vOQSY9.jpg" alt="river"></li>
+                <li><img width="200px" id="owl" src="https://media.gettyimages.com/id/1432110247/photo/great-horned-owl.jpg?s=612x612&w=gi&k=20&c=fnzt_i9psgn7LkMqr6c6nFWx-Z9D-a6l5fZxD173h9o=" alt="owl" ></li>
+                <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            </ul>
+        </div>
+</body>
+<script>
+    // // document.getElementById('owl').onclick=function(){
+    // //     alert('owle');
+    // // }
+    // document.getElementById('Images').addEventListener('click',function(e){
+    //     console.log("Image clicked");
+    //     // alert('owl clicked');
+    // },false)
+    // // 1598523
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl");
+    //     e.stopPropagation();
+    //     // alert('owl clicked');
+    // },false)
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log(e);
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // })
+
+    document.querySelector('#Images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        let removeit=e.target.tagName;
+        if(removeit==='IMG')
+        e.target.parentNode.remove();
+        // removeit.parentNode.removeChild(removeit);
+    }, false)
+</script>
+</html>

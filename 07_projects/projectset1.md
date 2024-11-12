@@ -184,7 +184,7 @@ function endGame(){
 function newGame(){
     const newGameButton=document.querySelector('#newGame');
     newGameButton.addEventListener('click',function(e){
-      randomint=(parseInt(Math.random()*100+1));
+      randomint=parseInt(Math.random()*100+1);
       prevGuess=[]
       numGuesses=1;
       guessSlot.innerHTML='';
