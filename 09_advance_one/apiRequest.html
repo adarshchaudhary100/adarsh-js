@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;" >
+    <h2>Hi there is some button to find followers of a person</h2>
+    <button id="followers">open</button>
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/hiteshchoudhary'
+    const xhr= new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    const p=document.createElement('p');
+    p.classList.add('div');
+    const follow=document.querySelector('#followers');
+    p.innerHTML=`<div></div>`
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        // console.log('hrer');
+        if(xhr.readyState==4){
+            const data=JSON.parse(this.responseText);
+            // const photo=
+            console.log(typeof (data));
+            console.log(data.followers);
+            follow.addEventListener('click',function(){
+                p.innerHTML=`<div>${data.followers}</div>
+                                <div>${data.avatar_url}</div>`;
+                follow.appendChild(p);
+            })
+        }
+    }
+    // follow.addEventListener('click',function(e){
+    //     // e.preventDefault();
+    //     console.log("here");
+    //     xhr.onreadystatechange=function(){
+    //         console.log(xhr.readyState);
+    //         console.log('hrer');
+    //         if(xhr.readyState==4){
+    //             const data=JSON.parse(this.responseText);
+    //             console.log(typeof (data));
+    //             console.log(data.followers);
+    //             p.innerHTML=`<h1>${data.followers}</h1>`;
+    //             follow.appendChild(p);
+    //         }
+    //     }
+    // })
+    xhr.send()
+</script>
+</html>
