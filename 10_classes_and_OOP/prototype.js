@@ -4,9 +4,9 @@ let myego="akul           ";
 
 // let heroes=["thor", " spiderman"];
 // let heropowers={
-    //     thor:"hammer",
-    //     spiderman:"sling",
-    //     getspider:function(){
+        // thor:"hammer",
+        // spiderman:"sling",
+        // getspider:function(){
         //         console.log(`spidy power is ${this.spiderman}`);
         //     }
         // }
@@ -39,7 +39,7 @@ let myego="akul           ";
                             // const TAsupport={
                                 //     makeassignment:"JS assignment",
                                 //     fulltime:true,
-                                //     __proto__:TeachingSupport
+                                    // __proto__:TeachingSupport
                                 // }
                                 
                                 // TeachingSupport.__proto__=user;
